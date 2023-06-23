@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { EnderecoController } from "./edereco.controller";
+import { EnderecoController } from "./endereco.controller";
 
 export class EnderecoRoutes{
     private router: Router = Router();

@@ -1,5 +1,4 @@
-CREATE DATABASE biblioteca_online_db;
-USE biblioteca_online_db;
+
 
 CREATE TABLE autor (
     id int not null auto_increment PRIMARY KEY,

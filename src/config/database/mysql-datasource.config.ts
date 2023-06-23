@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
   port: 3306,
   username: 'root',
   password: 'root',
-  database: 'api_cinema_db',
+  database: 'test_db',
   synchronize: false,
   logging: false,
   entities: ['src/api/components/**/*.entity{.ts,.js}'],
