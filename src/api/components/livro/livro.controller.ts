@@ -19,18 +19,18 @@ export class LivroController{
             return res.status(404).json({ erro: 'Autor inexistente'})
         }
 
-        const _editora = await AppDataSource.manager.findOneBy(Editora, { id: editora_id });
+        const _editora = await AppDataSource.manager.findOneBy(Editora, { id: req.body.editora_id });
         if(req.body.editora_id == undefined || _editora == null){
             return res.status(404).json({ erro: 'Editora inexistente'})
         }
 
         let livro = new Livro();
         livro.sinopse = req.body.sinopse;
-        livro.isbn = req.body.ibsn;
+        livro.isbn = req.body.isbn;
         livro.titulo = req.body.titulo;
         livro.quantidade_exemplares = req.body.quantidade_exemplares;
         livro.ano_publicacao = req.body.ano_publicacao;
-        livro.exemplares_disponivel = req.body.exemplares_desponivel;
+        livro.exemplares_disponivel = req.body.exemplares_disponivel;
         livro.autor_id = req.body.autor_id;
         livro.editora_id = req.body.editora_id;
 

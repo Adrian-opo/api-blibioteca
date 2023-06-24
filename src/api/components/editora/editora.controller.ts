@@ -15,7 +15,7 @@ export class EditoraController{
         let editora = new Editora();
         editora.razao_social = req.body.razao_social;
         editora.nome_fantasia = req.body.nome_fantasia;
-        editora.cnpj = req.body.cnp;
+        editora.cnpj = req.body.cnpj;
         
         const erros = await validate(editora);
 
